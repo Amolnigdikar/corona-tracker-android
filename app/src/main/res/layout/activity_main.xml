@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/country_spinner_layout"
+                android:background="#FFFFFF">
+                <Spinner
+                    style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:id="@+id/country_spinner"
+                    />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/confirmed_card_view"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/country_spinner_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/confirmed_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Infected People"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/confirmed_cases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/confirmed_title"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/last_updated_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/bottom_bar"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="right"
+                        android:text="15-sept-2020"
+                        android:textColor="#424242"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/bottom_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#2196f3" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recovered_card_view"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/confirmed_card_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/recovered_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Recovered People"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/recovered_cases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/recovered_title"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/last_updated_date_recovered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/bottom_bar2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="right"
+                        android:textColor="#424242"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/bottom_bar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#76ff03" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deaths_card_view"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/recovered_card_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/deaths_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Deaths"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                    <com.daasuu.cat.CountAnimationTextView
+                        android:id="@+id/death_cases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/deaths_title"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/last_updated_date_deaths"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/bottom_bar3"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="right"
+                        android:textColor="#424242"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/bottom_bar3"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#f44336" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
